@@ -1,5 +1,4 @@
 
-package Array;
 public class MoveZeros {
     public static void moveZerosToEnd(int[] arr) {
         int nonZeroIndex = 0; 

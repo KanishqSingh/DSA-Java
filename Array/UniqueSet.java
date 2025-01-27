@@ -1,4 +1,4 @@
-package Array;
+
 public class UniqueSet{
     public static int removeDuplicates(int[] arr, int n) {
         if (n == 0) return 0; 
