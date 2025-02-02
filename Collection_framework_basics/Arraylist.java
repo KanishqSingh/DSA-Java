@@ -31,5 +31,20 @@ public class Arraylist {
 
     }
 
+    public static void cloneandcopy(String[] args) { // clone an arrray list and add two array list
+        ArrayList<String> list1 = new ArrayList<>(Arrays.asList("Apple", "Banana", "Mango"));
+        ArrayList<String> list2 = new ArrayList<>(Arrays.asList("Orange", "Grapes", "Pineapple"));
+
+        
+        ArrayList<String> joinedList = new ArrayList<>(list1);
+        joinedList.addAll(list2);
+        System.out.println("Joined ArrayList: " + joinedList);
+
+        
+        ArrayList<String> clonedList = (ArrayList<String>) joinedList.clone();
+        System.out.println("Cloned ArrayList: " + clonedList);
+        
+    }
+
     
 }
