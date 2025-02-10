@@ -1,5 +1,5 @@
 //Dutch national flag problem
-package Array;
+
 public class SortColors {
     public static void sortColors(int[] nums) {
         
