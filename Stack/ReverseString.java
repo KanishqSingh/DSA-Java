@@ -16,6 +16,6 @@ public class ReverseString {
 
     public static void main(String[] args) {
         String str = "hello";
-        System.out.println(reverse(str)); // "olleh"
+        System.out.println(reverse(str)); 
     }
 }
