@@ -29,7 +29,7 @@ public class BullsAndCows {
     }
 
     public static void main(String[] args) {
-        System.out.println(getHint("1807", "7810")); // Output: "1A3B"
-        System.out.println(getHint("1123", "0111")); // Output: "1A1B"
+        System.out.println(getHint("1807", "7810")); 
+        System.out.println(getHint("1123", "0111")); 
     }
 }
