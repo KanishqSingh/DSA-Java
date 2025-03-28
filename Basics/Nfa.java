@@ -2,7 +2,7 @@ public class Nfa {
 
     
     public static boolean validateString(String input) {
-        // Condition 1: The string must be exactly 4 characters long
+      
         if (input.length() != 4) {
             return false;
         }
@@ -31,10 +31,10 @@ public class Nfa {
         String test4 = "aaab";
         String test5 = "aaaa";
 
-        System.out.println("Test 1 (" + test1 + "): " + (validateString(test1) ? "Valid" : "Invalid"));
-        System.out.println("Test 2 (" + test2 + "): " + (validateString(test2) ? "Valid" : "Invalid"));
-        System.out.println("Test 3 (" + test3 + "): " + (validateString(test3) ? "Valid" : "Invalid"));
-        System.out.println("Test 4 (" + test4 + "): " + (validateString(test4) ? "Valid" : "Invalid"));
-        System.out.println("Test 5 (" + test5 + "): " + (validateString(test5) ? "Valid" : "Invalid"));
+        System.out.println(validateString(test1)? "Accepted" : "Rejected");
+        System.out.println(validateString(test2)? "Accepted" : "Rejected");
+        System.out.println(validateString(test3)? "Accepted" : "Rejected");
+        System.out.println(validateString(test4)? "Accepted" : "Rejected");
+        System.out.println(validateString(test5)? "Accepted" : "Rejected");
     }
 }
