@@ -1,6 +1,6 @@
 public class Nfa {
 
-    // Method to validate the string using NFA
+    
     public static boolean validateString(String input) {
         // Condition 1: The string must be exactly 4 characters long
         if (input.length() != 4) {
