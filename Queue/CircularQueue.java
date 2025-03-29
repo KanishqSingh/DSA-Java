@@ -2,50 +2,49 @@ class CircularQueue {
     private int[] queue;
     private int front, rear, size, capacity;
 
-    // Constructor to initialize queue
+    
     public CircularQueue(int capacity) {
         this.capacity = capacity;
         this.queue = new int[capacity];
         this.front = this.size = 0;
-        this.rear = capacity - 1; // rear initially at the last index
+        this.rear = capacity - 1; 
     }
 
-    // Check if the queue is full
+
     private boolean isFull() {
         return size == capacity;
     }
 
-    // Check if the queue is empty
+   
     private boolean isEmpty() {
         return size == 0;
     }
 
-    // Enqueue operation
+
     public void enqueue(int item) {
         if (isFull()) {
             System.out.println("Queue is full. Cannot enqueue " + item);
             return;
         }
-        rear = (rear + 1) % capacity; // Move rear circularly
+        rear = (rear + 1) % capacity; 
         queue[rear] = item;
         size++;
         System.out.println(item + " enqueued.");
     }
 
-    // Dequeue operation
+  
     public int dequeue() {
         if (isEmpty()) {
             System.out.println("Queue is empty. Cannot dequeue.");
             return -1;
         }
         int item = queue[front];
-        front = (front + 1) % capacity; // Move front circularly
+        front = (front + 1) % capacity; 
         size--;
         System.out.println(item + " dequeued.");
         return item;
     }
 
-    // Peek operation (get front element)
     public int peek() {
         if (isEmpty()) {
             System.out.println("Queue is empty.");
@@ -54,7 +53,7 @@ class CircularQueue {
         return queue[front];
     }
 
-    // Display queue elements
+   
     public void display() {
         if (isEmpty()) {
             System.out.println("Queue is empty.");
@@ -67,7 +66,7 @@ class CircularQueue {
         System.out.println();
     }
 
-    // Main method for testing
+ 
     public static void main(String[] args) {
         CircularQueue cq = new CircularQueue(5);
         cq.enqueue(10);
