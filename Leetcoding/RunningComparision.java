@@ -1,4 +1,6 @@
+package Leetcoding;
 import java.util.*;
+
 
 public class RunningComparision {
     public static List<Integer> countHappyDays(List<int[]> testCases) {
