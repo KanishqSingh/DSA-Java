@@ -1,5 +1,6 @@
 package Linkedlist;
 
+
 class Node{
     int data;
     Node next;
@@ -10,23 +11,26 @@ class Node{
     }
 }
 
-public class EvenOdd {
+
+public class EvenOddPractice {
+
     Node head;
 
     void add(int data){
         Node newnode = new Node(data);
+
         if(head == null){
             head = newnode;
-            return ;
-
+            return;
         }
 
         Node temp = head;
-        while(temp.next!=null){
+        while(temp.next != null){
             temp = temp.next;
         }
+
         temp.next = newnode;
-        
+
     }
 
     public Node evenodd(Node head){
@@ -39,43 +43,50 @@ public class EvenOdd {
             odd = even.next;
             even.next = odd.next;
             even = even.next;
-
         }
 
         odd.next = evenstart;
         return head;
 
+
     }
 
-    public void printList() {
+    public void printlist(){
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.data + " -> ");
+            System.out.print(temp.data + "-->");
             temp = temp.next;
+            
         }
         System.out.println("null");
     }
 
     public static void main(String[] args) {
-        EvenOdd list = new EvenOdd();
-        // Node head;
+        EvenOddPractice list = new EvenOddPractice();
 
         list.add(5);
         list.add(4);
-        list.add(3);
-        list.add(2);
         list.add(1);
+        list.add(2);
         list.add(0);
+        list.add(3);
 
-        list.printList();
+        list.printlist();
 
-        System.out.println("After even odd rearrangements");
+        System.out.print("After rearrangements\n");
+
         list.head = list.evenodd(list.head);
 
-        list.printList();
+        list.printlist();
+
+
 
     }
 
+
+
+
+    
 
     
 }
