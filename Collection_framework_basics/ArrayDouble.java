@@ -11,7 +11,10 @@ public class ArrayDouble {
         arr1.add(2);
         int size = arr1.size();
 
-        for(int i=0;i<2;i++){
+        int d = 4;
+
+        for(int i=0;i<d-1;i++){
+            // int size = arr1.size();
             for(int j=0;j<size;j++){
                 arr1.add(arr1.get(j));
             }
