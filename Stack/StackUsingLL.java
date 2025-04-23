@@ -12,12 +12,13 @@ class Node {
 }
 
 class StackUsingLL {
-    private Node top;
+    
 
-    public StackUsingLL() {
-        this.top = null;
-    }
-
+    // public StackUsingLL() {
+    //     this.top = null;
+    // }
+    // Node top = null;
+    private Node top = null;
     public void push(int data) {
         Node newNode = new Node(data);
         newNode.next = top;
@@ -50,7 +51,7 @@ class StackUsingLL {
         } else {
             Node temp = top;
             while (temp != null) {
-                System.out.print(temp.data + " ");
+                System.out.println(" | " + temp.data + " | ");
                 temp = temp.next;
             }
             System.out.println();
