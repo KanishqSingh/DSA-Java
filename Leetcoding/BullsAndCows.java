@@ -1,7 +1,7 @@
 package Leetcoding;
 
 
-import java.util.*;
+
 
 public class BullsAndCows {
     public static String getHint(String secret, String guess) {
