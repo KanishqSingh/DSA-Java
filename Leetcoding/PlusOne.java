@@ -1,6 +1,5 @@
 package Leetcoding;
 
-
 import java.util.Arrays;
 
 public class PlusOne {

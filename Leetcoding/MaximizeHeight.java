@@ -1,5 +1,6 @@
-import java.util.*;
+package Leetcoding;
 
+import java.util.*;
 public class MaximizeHeight {
     public int maximumSum(List<Integer> maximumHeights) {
         Collections.sort(maximumHeights, Collections.reverseOrder());
