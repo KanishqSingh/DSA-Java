@@ -1,13 +1,13 @@
 class CircularQueue {
     private int[] queue;
-    private int front, end, size, capacity;
+    private int front, rear, size, capacity;
 
     
     public CircularQueue(int capacity) {
         this.capacity = capacity;
         this.queue = new int[capacity];
         this.front = this.size = 0;
-        this.end = capacity - 1; 
+        this.rear = capacity - 1; 
     }
 
 
@@ -26,8 +26,8 @@ class CircularQueue {
             System.out.println("Queue is full. Cannot enqueue " + item);
             return;
         }
-        end = (end + 1) % capacity; 
-        queue[end] = item;
+        rear = (rear + 1) % capacity; 
+        queue[rear] = item;
         size++;
         System.out.println(item + " enqueued.");
     }
