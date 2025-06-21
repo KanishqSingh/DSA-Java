@@ -32,8 +32,9 @@ public class IndexOfLoop {
         int count = 0;
 
         while (temp.next != null) {
-            if (count == index)
+            if (count == index){
                 loopNode = temp;
+            }
             temp = temp.next;
             count++;
         }
