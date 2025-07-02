@@ -25,27 +25,27 @@ public class ModifyLinkedList {
 
     }
 
-    public static void modifyHalf(ListNode head) {
-        if (head == null || head.next == null)
-            return;
 
-        ListNode slow = head, fast = head;
-        while (fast != null && fast.next != null && fast.next.next != null) {
+    
+    public static void modifyHalf(ListNode head){
+        if(head == null || head.next == null) return;
+
+        ListNode slow = head , fast = head;
+
+        while(fast != null && fast.next !=null && fast.next.next != null){
             slow = slow.next;
             fast = fast.next.next;
         }
-
+        // System.out.println(slow.val);
         ListNode secondhalf = reverse(slow.next);
         ListNode revhead = secondhalf;
+        ListNode first = head;
 
-        ListNode firsthalf = head;
         while (secondhalf != null) {
-            firsthalf.val = firsthalf.val - secondhalf.val;
-            firsthalf = firsthalf.next;
+            first.val = secondhalf.val - first.val;
+            first = first.next;
             secondhalf = secondhalf.next;
-            
         }
-
         slow.next = reverse(revhead);
 
     }
@@ -63,8 +63,9 @@ public class ModifyLinkedList {
         head.next = new ListNode(4);
         head.next.next = new ListNode(5);
         head.next.next.next = new ListNode(3);
-        head.next.next.next.next = new ListNode(2);
-        head.next.next.next.next.next = new ListNode(1);
+        head.next.next.next.next = new ListNode(3);
+        head.next.next.next.next.next = new ListNode(2);
+        // head.next.next.next.next.next.next = new ListNode(1);
 
         System.out.print("Original List: ");
         printList(head);
