@@ -1,6 +1,5 @@
 
 package Dynamic_Prog;
-
 import java.util.*;
 
 public class GoldMine {
