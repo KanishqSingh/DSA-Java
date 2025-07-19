@@ -15,28 +15,48 @@ public class CreateSimpleGraph {
         }
     }
 
-    public static boolean hasPath(ArrayList<Edge>[] graph,int src,int des,boolean[] visited){
+    public static boolean hasPath(ArrayList<Edge>[] graph,int src,int
+    des,boolean[] visited){
 
-        if(src == des){
-            return true;
+    if(src == des){
+    return true;
+    }
+    visited[src] = true;
+    for (Edge edge : graph[src]) {
+    if(visited[edge.nbr] == false){
+    boolean hasNbrPath = hasPath(graph, edge.nbr, des, visited);
+    if(hasNbrPath == true){
+    return true;
+    }
+    }
+
+    }
+    return false;
+    }
+    public static void printAllPath(ArrayList<Edge>[] graph, int src, int des, boolean[] printPathVisited, String psf) {
+        if (src == des) {
+            System.out.println(psf);
+            return;
         }
-        visited[src] = true;
+
+        printPathVisited[src] = true;
         for (Edge edge : graph[src]) {
-            if(visited[edge.nbr] == false){
-                boolean hasNbrPath = hasPath(graph, edge.nbr, des, visited);
-                if(hasNbrPath == true){
-                    return true;
-                }
+            if (printPathVisited[edge.nbr] == false) {
+                printAllPath(graph, edge.nbr, des, printPathVisited, psf + "->" + edge.nbr);
             }
-            
+
         }
-        return false;
+        printPathVisited[src] = false;
+
+
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        // CreateSimpleGraph obj = new CreateSimpleGraph();
+
         System.out.println("Enter no Of Vertices");
-        int vertices = sc.nextInt();
+        int vertices = 7;
         ArrayList<Edge>[] graph = new ArrayList[vertices];
         for (int i = 0; i < vertices; i++) {
             graph[i] = new ArrayList<Edge>();
@@ -68,12 +88,18 @@ public class CreateSimpleGraph {
         graph[4].add(new Edge(4, 1, 30));
 
         boolean[] visited = new boolean[vertices];
+        boolean[] printPathVisited = new boolean[vertices];
 
         int src = 0;
         int des = 6;
 
+        String psf=" " + src;
+
         boolean res = hasPath(graph,src,des,visited);
-        System.out.println(res);
+        System.out.println("Graph has path :- "+ res);
+        
+        printAllPath(graph, src, des, printPathVisited,  psf);
+        
 
     }
 }
