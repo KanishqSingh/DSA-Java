@@ -1,3 +1,4 @@
+package Leetcoding;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -5,27 +6,22 @@ class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         ArrayList<Integer> arr = new ArrayList<>();
 
-        // Add all elements from nums1
         for (int i = 0; i < nums1.length; i++) {
             arr.add(nums1[i]);
         }
 
-        // Add all elements from nums2
         for (int i = 0; i < nums2.length; i++) {
             arr.add(nums2[i]);
         }
 
-        // Sort the combined list
         Collections.sort(arr);
 
         int n = arr.size();
         if (n % 2 == 0) {
-            // Even length → average of two middle elements
             int mid1 = n / 2;
             int mid2 = mid1 - 1;
             return (arr.get(mid1) + arr.get(mid2)) / 2.0;
         } else {
-            // Odd length → middle element
             return arr.get(n / 2);
         }
     }
@@ -38,4 +34,4 @@ class Solution {
         System.out.println(obj.findMedianSortedArrays(nums1, nums2)); 
     }
 }
-}
+
