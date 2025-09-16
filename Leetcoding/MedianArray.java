@@ -25,7 +25,6 @@ class Solution {
             return arr.get(n / 2);
         }
     }
-
     public static void main(String[] args) {
         Solution obj = new Solution();
         int[] nums1 = {1, 3};
