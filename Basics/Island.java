@@ -9,7 +9,7 @@ class Island {
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
                 if (grid[r][c] == '1') { 
-                    numIslands++;  // Found a new island
+                    numIslands++; 
                     dfs(grid, r, c); 
                 }
             }
@@ -21,7 +21,7 @@ class Island {
         int rows = grid.length, cols = grid[0].length;
 
         if (r < 0 || c < 0 || r >= rows || c >= cols || grid[r][c] == '0') {
-            return; // Stop if out of bounds or water
+            return; 
         }
 
         grid[r][c] = '0'; 

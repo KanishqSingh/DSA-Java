@@ -25,9 +25,7 @@ public class ArrayLeftShift
 		int d=3;
 		
 		shiftArray(arr1,size,d);
-		
-
-		
+        
 		for(int i=0;i<size;i++){
 		    System.out.println(arr1[i]);
 		}
