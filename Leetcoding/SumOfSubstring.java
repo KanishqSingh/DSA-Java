@@ -1,3 +1,4 @@
+package Leetcoding;
 public class SumOfSubstring {
     
     public static int maxSum(int[] arr, int k) {
