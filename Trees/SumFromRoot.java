@@ -42,7 +42,6 @@ public class SumFromRootToLeaf {
         }
     }
 
-    // Core logic: calculate sum of all root-to-leaf numbers
     public int sumRootToLeaf(Node root, int val) {
         if(root == null) 
         {return 0;
