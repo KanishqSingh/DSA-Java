@@ -1,6 +1,6 @@
+package Leetcoding;
 public class Nqueen {
     
-
     private static void printSolution(int[][] board) {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
@@ -51,7 +51,7 @@ public class Nqueen {
                 // Recursively place queens in the next row
                 res = solveNQueens(board, row + 1) || res;
 
-                // Backtrack: Remove the queen from the board
+                
                 board[row][col] = 0;
             }
         }
@@ -60,7 +60,7 @@ public class Nqueen {
     }
 
     public static void main(String[] args) {
-        int N = 8; // Change N for different board sizes
+        int N = 8;
         int[][] board = new int[N][N];
 
         if (!solveNQueens(board, 0)) {
