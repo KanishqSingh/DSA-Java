@@ -17,8 +17,8 @@ public static int[] Alternate(int[] A, int n){
   
   for(int i=0;i<n/2;i++){
       
-      A[2*i] = pos.get(i);
-      A[2*i+1] = neg.get(i);
+      A[2*i] = pos.get(i)
+      A[2*i+1] = neg.get(i)
   }
 
  
