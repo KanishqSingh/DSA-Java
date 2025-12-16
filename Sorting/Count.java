@@ -22,7 +22,7 @@ public class Count {
         }
 
         for (int i = arr.length - 1; i >= 0; i--) {
-            output[count[arr[i] - min] - 1] = arr[i]
+            output[count[arr[i] - min] - 1] = arr[i];
             count[arr[i] - min]--
         }
 
