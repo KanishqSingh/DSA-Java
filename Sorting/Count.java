@@ -22,8 +22,8 @@ public class Count {
         }
 
         for (int i = arr.length - 1; i >= 0; i--) {
-            output[count[arr[i] - min] - 1] = arr[i];
-            count[arr[i] - min]--;
+            output[count[arr[i] - min] - 1] = arr[i]
+            count[arr[i] - min]--
         }
 
         System.arraycopy(output, 0, arr, 0, arr.length);
