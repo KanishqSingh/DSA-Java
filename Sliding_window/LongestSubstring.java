@@ -1,9 +1,8 @@
-package Sliding_Window;
 
 
 import java.util.HashMap;
 
-class LongestSubstring {
+class LongestSubstring {//test
     public static int longestSubstring(String s, int k) {
         HashMap<Character, Integer> map = new HashMap<>();
         int left = 0, maxLen = 0;

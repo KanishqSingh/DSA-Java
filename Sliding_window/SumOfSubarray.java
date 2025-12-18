@@ -1,4 +1,4 @@
-package Sliding_Window;
+
 
 class SumOfSubarray {
     public static int maxSum(int[] arr, int k) {
