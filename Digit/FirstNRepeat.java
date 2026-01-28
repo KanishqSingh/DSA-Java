@@ -1,6 +1,8 @@
-import java.util.*;
-public class FirstNonRepeating {
+    import java.util.*;
+
    
+
+public class FirstNRepeat {
 
     public static int firstNonRepeating(int[] arr) {
         Map<Integer, Integer> freq = new HashMap<>();
@@ -21,6 +23,8 @@ public class FirstNonRepeating {
         int[] arr = {1, 2, 3, 2, 1, 4};
         System.out.println(firstNonRepeating(arr)); 
     }
+
+
 
 
 }
