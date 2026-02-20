@@ -27,7 +27,7 @@ public class MaxProdWordLen {
                     max = Math.max(max, product);
                 }
             }
-        }
+        } //
 
         return max;
     }
