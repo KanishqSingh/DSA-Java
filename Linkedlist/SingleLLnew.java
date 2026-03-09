@@ -11,7 +11,7 @@ class Node {
         this.next = null;
     }
 }
-
+//
 public class SingleLLnew {
 
     private Node head;
